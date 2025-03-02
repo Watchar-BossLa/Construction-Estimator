@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Estimator - AI-Powered Construction Estimation Platform</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .hero {
+            background-color: #2c3e50;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+        
+        .features {
+            padding: 80px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+        
+        .feature-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .coming-soon {
+            background-color: #f4f6f9;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .coming-soon h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .demo-section {
+            padding: 80px 0;
+        }
+        
+        .demo-container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .demo-image {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .demo-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .demo-content {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .demo-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .demo-list {
+            margin-bottom: 30px;
+        }
+        
+        .demo-list-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .demo-list-item:before {
+            content: "✓";
+            color: #2ecc71;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .demo-container {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Construction Estimator</h1>
+            </div>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#demo">Demo</a>
+                <a href="#coming-soon">Roadmap</a>
+                <a href="app.html" class="nav-button">Launch App</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>AI-Powered Construction Estimation</h1>
+            <p>Revolutionize your quantity takeoffs and cost estimates with our cutting-edge AI technology. Upload your drawings and get accurate measurements and cost estimates in minutes.</p>
+            <a href="app.html" class="cta-button">Try It Now</a>
+        </div>
+    </section>
+    
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📏</div>
+                    <h3 class="feature-title">Accurate Measurements</h3>
+                    <p>Quickly measure walls, doors, windows, and rooms with precise calculations in your preferred units.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Detailed Cost Estimates</h3>
+                    <p>Generate comprehensive cost reports based on your measurements and material unit prices.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3 class="feature-title">Project Saving</h3>
+                    <p>Save your projects locally and continue working on them later with our flexible storage system.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Data Export</h3>
+                    <p>Export your measurements and estimates to CSV format for use in other applications.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🖌️</div>
+                    <h3 class="feature-title">Intuitive Drawing Tools</h3>
+                    <p>Mark up your drawings with easy-to-use tools for walls, doors, windows, and room areas.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Works Offline</h3>
+                    <p>No internet connection required after initial loading - work anywhere, anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <div class="demo-container">
+                <div class="demo-image">
+                    <img src="https://via.placeholder.com/600x400" alt="Construction Estimator Demo">
+                </div>
+                <div class="demo-content">
+                    <h2>How It Works</h2>
+                    <div class="demo-list">
+                        <div class="demo-list-item">
+                            <p><strong>Upload Your Drawing</strong> - Import any blueprint or floor plan image.</p>
+                        </div>
+                        <div class="demo-list-item">
+                            <p><strong>Set the Scale</strong> - Define your working units (m, cm, feet, inches).</p>
+                        </div>
+                        <div class="demo-list-item">
+                            <p><strong>Mark Elements</strong> - Use our tools to identify walls, doors, windows, and rooms.</p>
+                        </div>
+                        <div class="demo-list-item">
+                            <p><strong>Review Measurements</strong> - See all quantities calculated automatically.</p>
+                        </div>
+                        <div class="demo-list-item">
+                            <p><strong>Generate Estimates</strong> - Input unit costs and get detailed cost breakdowns.</p>
+                        </div>
+                        <div class="demo-list-item">
+                            <p><strong>Export Results</strong> - Save for sharing or using in other applications.</p>
+                        </div>
+                    </div>
+                    <a href="app.html" class="cta-button">Start Using Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="coming-soon" class="coming-soon">
+        <div class="container">
+            <h2>Coming Soon</h2>
+            <p>We're developing advanced features to make construction estimation even more powerful:</p>
+            <div class="features-grid" style="margin-top: 40px;">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">AI Element Detection</h3>
+                    <p>Automatic identification of walls, doors, windows, and other elements from your drawings.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3 class="feature-title">Cloud Storage</h3>
+                    <p>Securely store your projects in the cloud and access them from any device.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3 class="feature-title">Team Collaboration</h3>
+                    <p>Work together with colleagues in real-time on the same project with commenting and review tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>Construction Estimator &copy; 2023 - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

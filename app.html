@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Estimator - Drawing Tool</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="app-body">
+    <header class="app-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Construction Estimator</h1>
+            </div>
+            <nav class="app-nav">
+                <button id="loadButton" class="btn">Load Drawing</button>
+                <button id="saveProjectButton" class="btn">Save Project</button>
+                <button id="exportButton" class="btn">Export Data</button>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="main-container">
+        <div class="toolbar">
+            <div class="tool-group">
+                <div class="tool-group-title">Elements</div>
+                <button id="wallButton" data-tool="wall" class="tool-btn">Wall</button>
+                <button id="doorButton" data-tool="door" class="tool-btn">Door</button>
+                <button id="windowButton" data-tool="window" class="tool-btn">Window</button>
+                <button id="roomButton" data-tool="room" class="tool-btn">Room/Area</button>
+            </div>
+            
+            <div class="tool-group">
+                <div class="tool-group-title">Measurements</div>
+                <button id="measureButton" data-tool="measure" class="tool-btn">Linear</button>
+                <button id="areaButton" data-tool="area" class="tool-btn">Area</button>
+            </div>
+            
+            <div class="tool-group">
+                <div class="tool-group-title">View</div>
+                <button id="panButton" data-tool="pan" class="tool-btn">Pan</button>
+                <button id="zoomInButton" class="tool-btn">Zoom In</button>
+                <button id="zoomOutButton" class="tool-btn">Zoom Out</button>
+                <button id="resetViewButton" class="tool-btn">Reset View</button>
+            </div>
+            
+            <div class="tool-group">
+                <div class="tool-group-title">Edit</div>
+                <button id="selectButton" data-tool="select" class="tool-btn">Select</button>
+                <button id="deleteButton" class="tool-btn">Delete</button>
+                <button id="clearButton" class="tool-btn">Clear All</button>
+            </div>
+        </div>
+        
+        <div class="workspace">
+            <div class="canvas-container">
+                <canvas id="annotationCanvas" width="1000" height="600"></canvas>
+            </div>
+            
+            <div class="info-panel">
+                <div class="panel-card">
+                    <h3>Scale Settings</h3>
+                    <div class="scale-setting">
+                        <label for="scaleInput">1 pixel =</label>
+                        <input type="number" id="scaleInput" min="0.001" step="0.001" value="1">
+                        <select id="scaleUnit">
+                            <option value="mm">mm</option>
+                            <option value="cm" selected>cm</option>
+                            <option value="m">m</option>
+                            <option value="inch">inch</option>
+                            <option value="ft">ft</option>
+                        </select>
+                        <button id="setScaleButton" class="btn-small">Set</button>
+                    </div>
+                    <div class="scale-setting">
+                        <label for="wallHeightInput">Wall Height:</label>
+                        <input type="number" id="wallHeightInput" min="0.1" step="0.1" value="2.4">
+                        <select id="wallHeightUnit">
+                            <option value="mm">mm</option>
+                            <option value="cm">cm</option>
+                            <option value="m" selected>m</option>
+                            <option value="inch">inch</option>
+                            <option value="ft">ft</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="panel-card">
+                    <h3>Measurements</h3>
+                    <div id="measurementList" class="measurement-list">
+                        <!-- Measurements will be listed here -->
+                    </div>
+                    <div id="totalSection" class="totals-section">
+                        <!-- Totals will be shown here -->
+                    </div>
+                </div>
+                
+                <div class="panel-card">
+                    <h3>Material Costs</h3>
+                    <div class="material-list">
+                        <div class="material-item">
+                            <div class="material-name">Walls (per m²)</div>
+                            <input type="number" id="wallCost" class="material-unit-cost" value="45">
+                        </div>
+                        <div class="material-item">
+                            <div class="material-name">Floor (per m²)</div>
+                            <input type="number" id="floorCost" class="material-unit-cost" value="30">
+                        </div>
+                        <div class="material-item">
+                            <div class="material-name">Doors (each)</div>
+                            <input type="number" id="doorCost" class="material-unit-cost" value="150">
+                        </div>
+                        <div class="material-item">
+                            <div class="material-name">Windows (each)</div>
+                            <input type="number" id="windowCost" class="material-unit-cost" value="200">
+                        </div>
+                    </div>
+                    <button id="calculateCostsButton" class="btn btn-full">Calculate Costs</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="notification" class="notification">Operation completed successfully</div>
+    
+    <input type="file" id="fileInput" accept="image/*" class="hidden">
+    <input type="file" id="projectFileInput" accept=".json" class="hidden">
+    
+    <script src="js/drawing.js"></script>
+    <script src="js/measurements.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
